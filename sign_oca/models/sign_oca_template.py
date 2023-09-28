@@ -92,6 +92,29 @@ class SignOcaTemplate(models.Model):
             item_id += 1
         return signatory_data
 
+    def _prepare_sign_oca_request_vals_from_record(self, record):
+        roles = self.mapped("item_ids.role_id").filtered(
+            lambda x: x.partner_type != "empty"
+        )
+        return {
+            "name": self.name,
+            "template_id": self.id,
+            "record_ref": "%s,%s" % (record._name, record.id),
+            "signatory_data": self._get_signatory_data(),
+            "data": self.data,
+            "signer_ids": [
+                (
+                    0,
+                    0,
+                    {
+                        "partner_id": role._get_partner_from_record(record),
+                        "role_id": role.id,
+                    },
+                )
+                for role in roles
+            ],
+        }
+
 
 class SignOcaTemplateItem(models.Model):
 

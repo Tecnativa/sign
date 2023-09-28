@@ -30,33 +30,12 @@ class SignOcaTemplateGenerateMulti(models.TransientModel):
             else:
                 item.model_id = item.model_id
 
-    def _prepare_sign_oca_request_vals_from_record(self, record):
-        roles = self.mapped("template_id.item_ids.role_id").filtered(
-            lambda x: x.partner_type != "empty"
-        )
-        return {
-            "name": self.template_id.name,
-            "template_id": self.template_id.id,
-            "record_ref": "%s,%s" % (record._name, record.id),
-            "signatory_data": self.template_id._get_signatory_data(),
-            "data": self.template_id.data,
-            "signer_ids": [
-                (
-                    0,
-                    0,
-                    {
-                        "partner_id": role._get_partner_from_record(record),
-                        "role_id": role.id,
-                    },
-                )
-                for role in roles
-            ],
-        }
-
     def _prepare_sign_oca_request_vals(self):
         vals = []
         for item in self.env[self.model].browse(self.env.context.get("active_ids")):
-            vals.append(self._prepare_sign_oca_request_vals_from_record(item))
+            vals.append(
+                self.template_id._prepare_sign_oca_request_vals_from_record(item)
+            )
         return vals
 
     def _generate(self):
