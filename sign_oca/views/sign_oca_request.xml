@@ -327,8 +327,17 @@
         <field name="model">sign.oca.request.signer</field>
         <field name="arch" type="xml">
             <form>
+                <header>
+                    <button
+                        string="Sign"
+                        type="object"
+                        name="action_sign_url"
+                        attrs="{'invisible': [('is_allow_signature', '=', False)]}"
+                    />
+                </header>
                 <sheet>
                     <group>
+                        <field name="is_allow_signature" invisible="1" />
                         <field name="role_id" readonly="1" />
                         <field name="partner_id" readonly="1" />
                         <field name="request_id" readonly="1" />
