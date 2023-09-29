@@ -71,6 +71,27 @@ class SignOcaTemplate(models.Model):
         item_vals["template_id"] = self.id
         return self.env["sign.oca.template.item"].create(item_vals).get_info()
 
+    def _get_signatory_data(self):
+        items = sorted(
+            self.item_ids,
+            key=lambda item: (
+                item.page,
+                item.position_y,
+                item.position_x,
+            ),
+        )
+        tabindex = 1
+        signatory_data = {}
+        item_id = 1
+        for item in items:
+            item_data = item._get_full_info()
+            item_data["id"] = item_id
+            item_data["tabindex"] = tabindex
+            tabindex += 1
+            signatory_data[item_id] = item_data
+            item_id += 1
+        return signatory_data
+
 
 class SignOcaTemplateItem(models.Model):
 
@@ -111,3 +132,17 @@ class SignOcaTemplateItem(models.Model):
             "height": self.height,
             "placeholder": self.placeholder,
         }
+
+    def _get_full_info(self):
+        """Método usado en los wizards en los requests que se crean."""
+        self.ensure_one()
+        vals = self.get_info()
+        vals.update(
+            {
+                "field_type": self.field_id.field_type,
+                "required": self.required,
+                "value": False,
+                "default_value": self.field_id.default_value,
+            }
+        )
+        return vals
