@@ -1,0 +1,1 @@
+odoo14-addon-sign_ooca @ git+https://github.com/OCA/sign.git@refs/pull/8/head#subdirectory=setup/sign_oca
