@@ -4,14 +4,17 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 16.0\n"
+"Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"PO-Revision-Date: 2024-02-09 07:29+0000\n"
+"Last-Translator: Douglas Custódio <douglascstd@yahoo.com>\n"
+"Language-Team: none\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: \n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: sign_oca
 #: model_terms:ir.ui.view,arch_db:sign_oca.sign_oca_template_mail
@@ -21,48 +24,58 @@ msgid ""
 msgstr ""
 
 #. module: sign_oca
+#. openerp-web
+#: code:addons/sign_oca/static/src/elements/systray.xml:0
+#, python-format
+msgid "0 Pending"
+msgstr ""
+
+#. module: sign_oca
 #: model_terms:ir.ui.view,arch_db:sign_oca.sign_oca_request_form_view
 msgid "<span class=\"o_stat_text\"> Signed</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\"> Assinado</span>"
 
 #. module: sign_oca
 #: model_terms:ir.ui.view,arch_db:sign_oca.sign_oca_template_mail
 msgid ""
 "<strong>Warning</strong> do not forward this email to other people!<br/>\n"
-"                    They will be able to access this document and sign it as yourself.<br/>"
+"                    They will be able to access this document and sign it as "
+"yourself.<br/>"
 msgstr ""
+"<strong>Atenção</strong> não encaminhe para outra pessoa!<br/>\n"
+"                    Eles poderão ter acesso a este documento e a sua "
+"assinatura.<br/>"
 
 #. module: sign_oca
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request_log__access_token
 msgid "Access Token"
-msgstr ""
+msgstr "Token de acesso"
 
 #. module: sign_oca
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request_signer__access_warning
 msgid "Access warning"
-msgstr ""
+msgstr "Alerta de acesso"
 
 #. module: sign_oca
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request_log__action
 msgid "Action"
-msgstr ""
+msgstr "Ação"
 
 #. module: sign_oca
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request__message_needaction
-#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template__message_needaction
 msgid "Action Needed"
-msgstr ""
+msgstr "Necessita de ação"
 
 #. module: sign_oca
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request__active
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template__active
 msgid "Active"
-msgstr ""
+msgstr "Ativo"
 
 #. module: sign_oca
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request__activity_ids
 msgid "Activities"
-msgstr ""
+msgstr "Atividades"
 
 #. module: sign_oca
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request__activity_exception_decoration
@@ -72,12 +85,12 @@ msgstr ""
 #. module: sign_oca
 #: model_terms:ir.ui.view,arch_db:sign_oca.sign_oca_request_form_view
 msgid "Activity Log"
-msgstr ""
+msgstr "Registro de Atividade"
 
 #. module: sign_oca
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request__activity_state
 msgid "Activity State"
-msgstr ""
+msgstr "Estado da atividade"
 
 #. module: sign_oca
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request__activity_type_icon
@@ -87,18 +100,30 @@ msgstr ""
 #. module: sign_oca
 #: model:ir.model.fields.selection,name:sign_oca.selection__sign_oca_request_log__action__add_field
 msgid "Add field"
+msgstr "Adicionar campo"
+
+#. module: sign_oca
+#: model:res.groups,name:sign_oca.sign_oca_group_admin
+msgid "Administrator"
 msgstr ""
+
+#. module: sign_oca
+#. openerp-web
+#: code:addons/sign_oca/static/src/elements/signature.js:0
+#, python-format
+msgid "Adopt Your Signature"
+msgstr "Adotar a tua assinatura"
 
 #. module: sign_oca
 #: model_terms:ir.ui.view,arch_db:sign_oca.sign_oca_request_kanban_view
 msgid "Archive"
-msgstr ""
+msgstr "Arquivar"
 
 #. module: sign_oca
 #: model_terms:ir.ui.view,arch_db:sign_oca.sign_oca_request_form_view
 #: model_terms:ir.ui.view,arch_db:sign_oca.sign_oca_request_search_view
 msgid "Archived"
-msgstr ""
+msgstr "Arquivado"
 
 #. module: sign_oca
 #: model_terms:ir.ui.view,arch_db:sign_oca.portal_sign_document_signed
@@ -106,15 +131,16 @@ msgid ""
 "As soon as all signers have signed the document, you will receive an email "
 "with the full document"
 msgstr ""
+"Tão logo os designados tenham assinado o documento, você recebe um email com "
+"o documento completo"
 
 #. module: sign_oca
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request__message_attachment_count
-#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template__message_attachment_count
 msgid "Attachment Count"
-msgstr ""
+msgstr "Contagem de Anexos"
 
 #. module: sign_oca
-#. odoo-javascript
+#. openerp-web
 #: code:addons/sign_oca/static/src/elements/elements.xml:0
 #, python-format
 msgid ""
@@ -123,27 +149,33 @@ msgid ""
 "for all purposes when it is used on documents, including legally binding "
 "contracts."
 msgstr ""
+"Ao clicar em \"Adotar e Assinar\", concordo que a assinatura/iniciais "
+"escolhidas serão uma representação eletrônica válida da minha assinatura/"
+"manuscrito para todos os fins quando utilizada em documentos, incluindo "
+"contratos legalmente vinculativos."
 
 #. module: sign_oca
-#. odoo-javascript
-#: code:addons/sign_oca/static/src/components/sign_oca_configure/sign_oca_configure.esm.js:0
+#. openerp-web
+#: code:addons/sign_oca/static/src/components/sign_oca_configure/sign_oca_configure.js:0
+#: code:addons/sign_oca/static/src/elements/signature.js:0
 #: model:ir.model.fields.selection,name:sign_oca.selection__sign_oca_request_log__action__cancel
 #: model_terms:ir.ui.view,arch_db:sign_oca.sign_oca_request_form_view
 #: model_terms:ir.ui.view,arch_db:sign_oca.sign_oca_template_generate_form_view
+#: model_terms:ir.ui.view,arch_db:sign_oca.sign_oca_template_generate_multi_form_view
 #, python-format
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 #. module: sign_oca
 #: model_terms:ir.ui.view,arch_db:sign_oca.sign_oca_request_search_view
 msgid "Canceled"
-msgstr ""
+msgstr "Cancelado"
 
 #. module: sign_oca
 #: model:ir.model.fields.selection,name:sign_oca.selection__sign_oca_request__state__cancel
 #: model_terms:ir.ui.view,arch_db:sign_oca.sign_oca_request_form_view
 msgid "Cancelled"
-msgstr ""
+msgstr "Cancelado"
 
 #. module: sign_oca
 #: model:ir.model.fields.selection,name:sign_oca.selection__sign_oca_field__field_type__check
@@ -151,7 +183,7 @@ msgid "Check"
 msgstr ""
 
 #. module: sign_oca
-#. odoo-javascript
+#. openerp-web
 #: code:addons/sign_oca/static/src/components/sign_oca_configure/sign_oca_configure.xml:0
 #, python-format
 msgid "Click on the field that you want to add"
@@ -183,6 +215,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_role__create_uid
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template__create_uid
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_generate__create_uid
+#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_generate_multi__create_uid
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_generate_signer__create_uid
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_item__create_uid
 msgid "Created by"
@@ -195,6 +228,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_role__create_date
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template__create_date
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_generate__create_date
+#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_generate_multi__create_date
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_generate_signer__create_date
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_item__create_date
 msgid "Created on"
@@ -218,14 +252,14 @@ msgid "Data"
 msgstr ""
 
 #. module: sign_oca
-#. odoo-javascript
+#. openerp-web
 #: code:addons/sign_oca/static/src/components/sign_oca_configure/sign_oca_configure.xml:0
 #, python-format
 msgid "Data is saved automatically when editing"
 msgstr ""
 
 #. module: sign_oca
-#. odoo-javascript
+#. openerp-web
 #: code:addons/sign_oca/static/src/components/sign_oca_configure/sign_oca_configure.xml:0
 #, python-format
 msgid "Data is saved automatically when editing."
@@ -237,13 +271,23 @@ msgid "Date"
 msgstr ""
 
 #. module: sign_oca
+#: model:ir.model.fields.selection,name:sign_oca.selection__sign_oca_role__partner_type__default
+msgid "Default"
+msgstr ""
+
+#. module: sign_oca
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_field__default_value
 msgid "Default Value"
 msgstr ""
 
 #. module: sign_oca
-#. odoo-javascript
-#: code:addons/sign_oca/static/src/components/sign_oca_configure/sign_oca_configure.esm.js:0
+#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_role__default_partner_id
+msgid "Default partner"
+msgstr ""
+
+#. module: sign_oca
+#. openerp-web
+#: code:addons/sign_oca/static/src/components/sign_oca_configure/sign_oca_configure.js:0
 #, python-format
 msgid "Delete"
 msgstr ""
@@ -259,6 +303,7 @@ msgid "Details"
 msgstr ""
 
 #. module: sign_oca
+#: model:ir.model.fields,field_description:sign_oca.field_res_users__display_name
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_field__display_name
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request__display_name
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request_log__display_name
@@ -266,6 +311,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_role__display_name
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template__display_name
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_generate__display_name
+#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_generate_multi__display_name
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_generate_signer__display_name
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_item__display_name
 msgid "Display Name"
@@ -284,72 +330,89 @@ msgstr ""
 #. module: sign_oca
 #: model:ir.model.fields.selection,name:sign_oca.selection__sign_oca_request__state__draft
 msgid "Draft"
-msgstr ""
+msgstr "Rascunho"
 
 #. module: sign_oca
 #: model_terms:ir.ui.view,arch_db:sign_oca.sign_oca_request_kanban_view
 msgid "Dropdown menu"
-msgstr ""
+msgstr "Menu Suspenso"
 
 #. module: sign_oca
-#. odoo-javascript
-#: code:addons/sign_oca/static/src/components/sign_oca_configure/sign_oca_configure.esm.js:0
+#. openerp-web
+#: code:addons/sign_oca/static/src/components/sign_oca_configure/sign_oca_configure.js:0
 #: model:ir.model.fields.selection,name:sign_oca.selection__sign_oca_request_log__action__edit_field
 #, python-format
 msgid "Edit field"
+msgstr "Editar Campo"
+
+#. module: sign_oca
+#: model:ir.model.fields.selection,name:sign_oca.selection__sign_oca_role__partner_type__empty
+msgid "Empty"
 msgstr ""
 
 #. module: sign_oca
-#. odoo-javascript
+#: model:ir.model.fields,help:sign_oca.field_sign_oca_role__expression_partner
+msgid "Example: ${object.partner_id.id}"
+msgstr ""
+
+#. module: sign_oca
+#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_role__expression_partner
+#: model:ir.model.fields.selection,name:sign_oca.selection__sign_oca_role__partner_type__expression
+msgid "Expression"
+msgstr ""
+
+#. module: sign_oca
+#. openerp-web
 #: code:addons/sign_oca/static/src/components/sign_oca_configure/sign_oca_configure.xml:0
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_item__field_id
 #, python-format
 msgid "Field"
-msgstr ""
+msgstr "Campo"
 
 #. module: sign_oca
-#. odoo-python
 #: code:addons/sign_oca/models/sign_oca_request.py:0
 #, python-format
 msgid "Field %s is not filled"
-msgstr ""
+msgstr "Campo %s não está preenchido"
 
 #. module: sign_oca
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_field__field_type
 msgid "Field Type"
-msgstr ""
+msgstr "Tipo de Campo"
 
 #. module: sign_oca
 #: model:ir.actions.act_window,name:sign_oca.sign_oca_field_act_window
 #: model:ir.ui.menu,name:sign_oca.sign_oca_field_menu
 #: model_terms:ir.ui.view,arch_db:sign_oca.sign_oca_template_form_view
 msgid "Fields"
-msgstr ""
+msgstr "Campos"
 
 #. module: sign_oca
-#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request__filename
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template__filename
 msgid "Filename"
-msgstr ""
+msgstr "Nome do arquivo"
 
 #. module: sign_oca
-#. odoo-javascript
+#. openerp-web
 #: code:addons/sign_oca/static/src/components/sign_oca_configure/sign_oca_configure.xml:0
 #, python-format
 msgid "Filled by"
-msgstr ""
+msgstr "Preenchido por"
 
 #. module: sign_oca
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request__message_follower_ids
-#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template__message_follower_ids
 msgid "Followers"
-msgstr ""
+msgstr "Seguidores"
+
+#. module: sign_oca
+#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores (Canais)"
 
 #. module: sign_oca
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request__message_partner_ids
-#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template__message_partner_ids
 msgid "Followers (Partners)"
-msgstr ""
+msgstr "Seguidores (Parceiros)"
 
 #. module: sign_oca
 #: model:ir.model.fields,help:sign_oca.field_sign_oca_request__activity_type_icon
@@ -359,47 +422,52 @@ msgstr ""
 #. module: sign_oca
 #: model_terms:ir.ui.view,arch_db:sign_oca.sign_oca_request_form_view
 msgid "Fully Signed"
-msgstr ""
+msgstr "Completamente Assinado"
 
 #. module: sign_oca
 #: model_terms:ir.ui.view,arch_db:sign_oca.sign_oca_request_search_view
 msgid "Future Activities"
+msgstr "Atividades Futuras"
+
+#. module: sign_oca
+#: model_terms:ir.ui.view,arch_db:sign_oca.sign_oca_template_generate_multi_form_view
+msgid "Generate"
 msgstr ""
 
 #. module: sign_oca
 #: model_terms:ir.ui.view,arch_db:sign_oca.sign_oca_template_generate_form_view
 msgid "Generate & sign"
-msgstr ""
+msgstr "Gerar e Assinar"
 
 #. module: sign_oca
 #: model:ir.model,name:sign_oca.model_sign_oca_template_generate
 msgid "Generate a signature request"
+msgstr "Gerar uma requisição de assinatura"
+
+#. module: sign_oca
+#: model:ir.model,name:sign_oca.model_sign_oca_template_generate_multi
+msgid "Generate signature requests"
 msgstr ""
 
 #. module: sign_oca
 #: model_terms:ir.ui.view,arch_db:sign_oca.sign_oca_request_search_view
 msgid "Group By"
-msgstr ""
-
-#. module: sign_oca
-#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request__has_message
-#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template__has_message
-msgid "Has Message"
-msgstr ""
+msgstr "Agrupado por"
 
 #. module: sign_oca
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_item__height
 msgid "Height"
-msgstr ""
+msgstr "Altura"
 
 #. module: sign_oca
-#. odoo-javascript
+#. openerp-web
 #: code:addons/sign_oca/static/src/components/sign_oca_configure/sign_oca_configure.xml:0
 #, python-format
 msgid "Help"
-msgstr ""
+msgstr "Ajuda"
 
 #. module: sign_oca
+#: model:ir.model.fields,field_description:sign_oca.field_res_users__id
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_field__id
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request__id
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request_log__id
@@ -407,15 +475,16 @@ msgstr ""
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_role__id
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template__id
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_generate__id
+#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_generate_multi__id
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_generate_signer__id
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_item__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: sign_oca
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request__activity_exception_icon
 msgid "Icon"
-msgstr ""
+msgstr "Icon"
 
 #. module: sign_oca
 #: model:ir.model.fields,help:sign_oca.field_sign_oca_request__activity_exception_icon
@@ -424,18 +493,17 @@ msgstr ""
 
 #. module: sign_oca
 #: model:ir.model.fields,help:sign_oca.field_sign_oca_request__message_needaction
-#: model:ir.model.fields,help:sign_oca.field_sign_oca_template__message_needaction
+#: model:ir.model.fields,help:sign_oca.field_sign_oca_request__message_unread
 msgid "If checked, new messages require your attention."
-msgstr ""
+msgstr "Se selecionado, novas mensagens necessitam da sua atenção."
 
 #. module: sign_oca
 #: model:ir.model.fields,help:sign_oca.field_sign_oca_request__message_has_error
-#: model:ir.model.fields,help:sign_oca.field_sign_oca_template__message_has_error
 msgid "If checked, some messages have a delivery error."
-msgstr ""
+msgstr "Se selecionado, algumas mensagens tiveram um erro de entrega."
 
 #. module: sign_oca
-#. odoo-javascript
+#. openerp-web
 #: code:addons/sign_oca/static/src/components/sign_oca_configure/sign_oca_configure.xml:0
 #, python-format
 msgid ""
@@ -444,22 +512,25 @@ msgid ""
 msgstr ""
 
 #. module: sign_oca
-#. odoo-javascript
+#. openerp-web
 #: code:addons/sign_oca/static/src/components/sign_oca_configure/sign_oca_configure.xml:0
 #, python-format
 msgid ""
-"In order to add a new field, do a right click over the PDF page. You will be"
-" able to select the field that you will import"
+"In order to add a new field, do a right click over the PDF page. You will be "
+"able to select the field that you will import"
 msgstr ""
 
 #. module: sign_oca
-#. odoo-javascript
+#. openerp-web
 #: code:addons/sign_oca/static/src/components/sign_oca_configure/sign_oca_configure.xml:0
 #, python-format
 msgid ""
-"In order to add a new field, do a right click over the PDF page. You will be able to select the field that you will import.\n"
-"                Then, you can move and resize the fields over the PDF page using the move icons.\n"
-"                If you do a click over a field, you will be able to change the default configurations of the field"
+"In order to add a new field, do a right click over the PDF page. You will be "
+"able to select the field that you will import.\n"
+"                Then, you can move and resize the fields over the PDF page "
+"using the move icons.\n"
+"                If you do a click over a field, you will be able to change "
+"the default configurations of the field"
 msgstr ""
 
 #. module: sign_oca
@@ -468,8 +539,12 @@ msgid "Ip"
 msgstr ""
 
 #. module: sign_oca
+#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request_signer__is_allow_signature
+msgid "Is Allow Signature"
+msgstr ""
+
+#. module: sign_oca
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request__message_is_follower
-#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template__message_is_follower
 msgid "Is Follower"
 msgstr ""
 
@@ -479,6 +554,7 @@ msgid "Item"
 msgstr ""
 
 #. module: sign_oca
+#: model:ir.model.fields,field_description:sign_oca.field_res_users____last_update
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_field____last_update
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request____last_update
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request_log____last_update
@@ -486,6 +562,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_role____last_update
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template____last_update
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_generate____last_update
+#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_generate_multi____last_update
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_generate_signer____last_update
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_item____last_update
 msgid "Last Modified on"
@@ -498,6 +575,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_role__write_uid
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template__write_uid
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_generate__write_uid
+#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_generate_multi__write_uid
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_generate_signer__write_uid
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_item__write_uid
 msgid "Last Updated by"
@@ -510,6 +588,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_role__write_date
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template__write_date
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_generate__write_date
+#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_generate_multi__write_date
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_generate_signer__write_date
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_item__write_date
 msgid "Last Updated on"
@@ -521,12 +600,7 @@ msgid "Late Activities"
 msgstr ""
 
 #. module: sign_oca
-#: model:ir.model,name:sign_oca.model_sign_oca_request_log
-msgid "Log access and edition on requests"
-msgstr ""
-
-#. module: sign_oca
-#. odoo-javascript
+#. openerp-web
 #: code:addons/sign_oca/static/src/components/sign_oca_pdf_portal/sign_oca_pdf_portal.xml:0
 #: model_terms:ir.ui.view,arch_db:sign_oca.portal_sign_document_signed
 #, python-format
@@ -535,12 +609,11 @@ msgstr ""
 
 #. module: sign_oca
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request__message_main_attachment_id
-#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template__message_main_attachment_id
 msgid "Main Attachment"
 msgstr ""
 
 #. module: sign_oca
-#. odoo-javascript
+#. openerp-web
 #: code:addons/sign_oca/static/src/components/sign_oca_pdf/sign_oca_pdf.xml:0
 #, python-format
 msgid "Main actions"
@@ -548,19 +621,26 @@ msgstr ""
 
 #. module: sign_oca
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_generate__message
+#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_generate_multi__message
 msgid "Message"
 msgstr ""
 
 #. module: sign_oca
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request__message_has_error
-#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template__message_has_error
 msgid "Message Delivery error"
 msgstr ""
 
 #. module: sign_oca
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request__message_ids
-#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template__message_ids
 msgid "Messages"
+msgstr ""
+
+#. module: sign_oca
+#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request_signer__model
+#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template__model_id
+#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_generate_multi__model
+#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_generate_multi__model_id
+msgid "Model"
 msgstr ""
 
 #. module: sign_oca
@@ -588,14 +668,13 @@ msgid "Name"
 msgstr ""
 
 #. module: sign_oca
-#. odoo-javascript
-#: code:addons/sign_oca/static/src/components/sign_oca_pdf_common/sign_oca_pdf_common.esm.js:0
+#. openerp-web
+#: code:addons/sign_oca/static/src/components/sign_oca_pdf_common/sign_oca_pdf_common.js:0
 #, python-format
 msgid "Need a valid PDF to add signature fields !"
 msgstr ""
 
 #. module: sign_oca
-#. odoo-python
 #: code:addons/sign_oca/models/sign_oca_request.py:0
 #, python-format
 msgid "New document to sign"
@@ -622,27 +701,40 @@ msgid "Next Item"
 msgstr ""
 
 #. module: sign_oca
+#. openerp-web
+#: code:addons/sign_oca/static/src/elements/systray.xml:0
+#, python-format
+msgid "No requests to do."
+msgstr ""
+
+#. module: sign_oca
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request__message_needaction_counter
-#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template__message_needaction_counter
 msgid "Number of Actions"
 msgstr ""
 
 #. module: sign_oca
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request__message_has_error_counter
-#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template__message_has_error_counter
 msgid "Number of errors"
 msgstr ""
 
 #. module: sign_oca
 #: model:ir.model.fields,help:sign_oca.field_sign_oca_request__message_needaction_counter
-#: model:ir.model.fields,help:sign_oca.field_sign_oca_template__message_needaction_counter
-msgid "Number of messages requiring action"
+msgid "Number of messages which requires an action"
 msgstr ""
 
 #. module: sign_oca
 #: model:ir.model.fields,help:sign_oca.field_sign_oca_request__message_has_error_counter
-#: model:ir.model.fields,help:sign_oca.field_sign_oca_template__message_has_error_counter
 msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: sign_oca
+#: model:ir.model.fields,help:sign_oca.field_sign_oca_request__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: sign_oca
+#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request__record_ref
+msgid "Object"
 msgstr ""
 
 #. module: sign_oca
@@ -658,7 +750,19 @@ msgid "Partner"
 msgstr ""
 
 #. module: sign_oca
-#. odoo-javascript
+#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_role__partner_type
+msgid "Partner type"
+msgstr ""
+
+#. module: sign_oca
+#. openerp-web
+#: code:addons/sign_oca/static/src/elements/systray.xml:0
+#, python-format
+msgid "Pending"
+msgstr ""
+
+#. module: sign_oca
+#. openerp-web
 #: code:addons/sign_oca/static/src/components/sign_oca_configure/sign_oca_configure.xml:0
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_item__placeholder
 #, python-format
@@ -666,7 +770,7 @@ msgid "Placeholder"
 msgstr ""
 
 #. module: sign_oca
-#. odoo-javascript
+#. openerp-web
 #: code:addons/sign_oca/static/src/components/sign_oca_pdf_portal/sign_oca_pdf_portal.xml:0
 #, python-format
 msgid "Please Review And Act On This Document"
@@ -688,9 +792,12 @@ msgid "Position Y"
 msgstr ""
 
 #. module: sign_oca
+#. openerp-web
+#: code:addons/sign_oca/static/src/elements/systray.xml:0
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request_log__request_id
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request_signer__request_id
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template__request_ids
+#, python-format
 msgid "Request"
 msgstr ""
 
@@ -700,24 +807,36 @@ msgid "Request Count"
 msgstr ""
 
 #. module: sign_oca
-#. odoo-python
 #: code:addons/sign_oca/models/sign_oca_request.py:0
 #, python-format
 msgid "Request cannot be signed"
 msgstr ""
 
 #. module: sign_oca
+#. openerp-web
+#: code:addons/sign_oca/static/src/elements/systray.xml:0
 #: model:ir.ui.menu,name:sign_oca.sign_oca_request_menu
 #: model_terms:ir.ui.view,arch_db:sign_oca.sign_oca_template_form_view
+#, python-format
 msgid "Requests"
 msgstr ""
 
 #. module: sign_oca
-#. odoo-javascript
+#. openerp-web
 #: code:addons/sign_oca/static/src/components/sign_oca_configure/sign_oca_configure.xml:0
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_item__required
 #, python-format
 msgid "Required"
+msgstr ""
+
+#. module: sign_oca
+#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request_signer__res_id
+msgid "Res"
+msgstr ""
+
+#. module: sign_oca
+#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request__user_id
+msgid "Responsible"
 msgstr ""
 
 #. module: sign_oca
@@ -744,8 +863,8 @@ msgid "Roles"
 msgstr ""
 
 #. module: sign_oca
-#. odoo-javascript
-#: code:addons/sign_oca/static/src/components/sign_oca_configure/sign_oca_configure.esm.js:0
+#. openerp-web
+#: code:addons/sign_oca/static/src/components/sign_oca_configure/sign_oca_configure.js:0
 #, python-format
 msgid "Save"
 msgstr ""
@@ -784,11 +903,14 @@ msgid "Show all records which has next action date is before today"
 msgstr ""
 
 #. module: sign_oca
-#. odoo-javascript
+#. openerp-web
 #: code:addons/sign_oca/static/src/components/sign_oca_pdf/sign_oca_pdf.xml:0
+#: code:addons/sign_oca/static/src/elements/signature.js:0
 #: model:ir.model.fields.selection,name:sign_oca.selection__sign_oca_request_log__action__sign
 #: model:ir.module.category,name:sign_oca.sign_oca_module_category
 #: model:ir.ui.menu,name:sign_oca.sign_oca_root_menu
+#: model_terms:ir.ui.view,arch_db:sign_oca.sign_oca_request_form_view
+#: model_terms:ir.ui.view,arch_db:sign_oca.sign_oca_request_signer_form_view
 #: model_terms:ir.ui.view,arch_db:sign_oca.sign_oca_request_tree_view
 #, python-format
 msgid "Sign"
@@ -812,6 +934,11 @@ msgid "Sign Oca Template Generate"
 msgstr ""
 
 #. module: sign_oca
+#: model:ir.actions.act_window,name:sign_oca.sign_oca_template_generate_multi_act_window
+msgid "Sign Oca Template Generate Multi"
+msgstr ""
+
+#. module: sign_oca
 #: model:ir.model,name:sign_oca.model_sign_oca_template_item
 msgid "Sign Oca Template Item"
 msgstr ""
@@ -822,14 +949,27 @@ msgid "Sign Request"
 msgstr ""
 
 #. module: sign_oca
+#: model:ir.model,name:sign_oca.model_sign_oca_request_log
+msgid "Sign Request Log"
+msgstr ""
+
+#. module: sign_oca
+#: model:ir.actions.act_window,name:sign_oca.sign_oca_request_signer_act_window
+msgid "Sign Request Signers"
+msgstr ""
+
+#. module: sign_oca
 #: model:ir.model,name:sign_oca.model_sign_oca_request_signer
 msgid "Sign Request Value"
 msgstr ""
 
 #. module: sign_oca
+#. openerp-web
+#: code:addons/sign_oca/static/src/elements/systray.xml:0
 #: model:ir.actions.act_window,name:sign_oca.sign_oca_request_act_window
 #: model:ir.actions.act_window,name:sign_oca.sign_oca_request_log_act_window
 #: model:ir.actions.act_window,name:sign_oca.sign_oca_request_template_act_window
+#, python-format
 msgid "Sign Requests"
 msgstr ""
 
@@ -869,8 +1009,7 @@ msgid "Signature Hash"
 msgstr ""
 
 #. module: sign_oca
-#. odoo-javascript
-#: code:addons/sign_oca/static/src/components/sign_oca_configure/sign_oca_configure.xml:0
+#. openerp-web
 #: code:addons/sign_oca/static/src/components/sign_oca_configure/sign_oca_configure.xml:0
 #, python-format
 msgid "Signature configuration"
@@ -938,6 +1077,7 @@ msgstr ""
 #. module: sign_oca
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request__template_id
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_generate__template_id
+#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_generate_multi__template_id
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_item__template_id
 #: model_terms:ir.ui.view,arch_db:sign_oca.sign_oca_request_kanban_view
 #: model_terms:ir.ui.view,arch_db:sign_oca.sign_oca_request_search_view
@@ -961,7 +1101,7 @@ msgid "The document has been cancelled"
 msgstr ""
 
 #. module: sign_oca
-#. odoo-javascript
+#. openerp-web
 #: code:addons/sign_oca/static/src/components/sign_oca_configure/sign_oca_configure.xml:0
 #, python-format
 msgid ""
@@ -970,7 +1110,6 @@ msgid ""
 msgstr ""
 
 #. module: sign_oca
-#. odoo-python
 #: code:addons/sign_oca/models/sign_oca_request.py:0
 #, python-format
 msgid "There are no signers, please fill them before configuring it"
@@ -1002,6 +1141,22 @@ msgid "Uid"
 msgstr ""
 
 #. module: sign_oca
+#: code:addons/sign_oca/models/res_users.py:0
+#, python-format
+msgid "Undefined"
+msgstr ""
+
+#. module: sign_oca
+#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: sign_oca
+#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: sign_oca
 #: model:res.groups,name:sign_oca.sign_oca_group_manager
 msgid "User: All Documents"
 msgstr ""
@@ -1012,7 +1167,11 @@ msgid "User: Own Documents Only"
 msgstr ""
 
 #. module: sign_oca
-#. odoo-python
+#: model:ir.model,name:sign_oca.model_res_users
+msgid "Users"
+msgstr ""
+
+#. module: sign_oca
 #: code:addons/sign_oca/models/sign_oca_request.py:0
 #, python-format
 msgid "Users %s has already signed the document"
@@ -1024,7 +1183,7 @@ msgid "Validate"
 msgstr ""
 
 #. module: sign_oca
-#. odoo-javascript
+#. openerp-web
 #: code:addons/sign_oca/static/src/components/sign_oca_pdf_portal/sign_oca_pdf_portal.xml:0
 #, python-format
 msgid "Validate & Send document"
@@ -1037,13 +1196,11 @@ msgstr ""
 
 #. module: sign_oca
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request__website_message_ids
-#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template__website_message_ids
 msgid "Website Messages"
 msgstr ""
 
 #. module: sign_oca
 #: model:ir.model.fields,help:sign_oca.field_sign_oca_request__website_message_ids
-#: model:ir.model.fields,help:sign_oca.field_sign_oca_template__website_message_ids
 msgid "Website communication history"
 msgstr ""
 
@@ -1058,7 +1215,12 @@ msgid "Wizard"
 msgstr ""
 
 #. module: sign_oca
-#. odoo-python
+#: code:addons/sign_oca/models/sign_oca_request.py:0
+#, python-format
+msgid "You are not allowed to sign this document."
+msgstr ""
+
+#. module: sign_oca
 #: code:addons/sign_oca/models/sign_oca_request.py:0
 #, python-format
 msgid "You can only configure requests in draft state"
