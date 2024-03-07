@@ -18,7 +18,6 @@ from odoo.http import request
 
 
 class SignOcaRequest(models.Model):
-
     _name = "sign.oca.request"
     _inherit = ["mail.thread", "mail.activity.mixin"]
     _description = "Sign Request"
@@ -94,6 +93,22 @@ class SignOcaRequest(models.Model):
     signer_is_allow_signature = fields.Boolean(
         compute="_compute_signer_is_allow_signature"
     )
+
+    @api.depends("signer_ids")
+    def _compute_signer_count(self):
+        res = self.env["sign.oca.request.signer"].read_group(
+            domain=[("request_id", "in", self.ids)],
+            fields=["request_id"],
+            groupby=["request_id"],
+        )
+        res_dict = {x["request_id"][0]: x["request_id_count"] for x in res}
+        for record in self:
+            record.signer_count = res_dict.get(record.id, 0)
+
+    @api.depends("signer_ids", "signer_ids.signed_on")
+    def _compute_signed_count(self):
+        for record in self:
+            record.signed_count = len(record.signer_ids.filtered(lambda r: r.signed_on))
 
     @api.depends("signatory_data")
     def _compute_next_item_id(self):
@@ -225,16 +240,6 @@ class SignOcaRequest(models.Model):
         self.write({"state": "cancel"})
         self._set_action_log("cancel")
 
-    @api.depends("signer_ids")
-    def _compute_signer_count(self):
-        for record in self:
-            record.signer_count = len(record.signer_ids)
-
-    @api.depends("signer_ids", "signer_ids.signed_on")
-    def _compute_signed_count(self):
-        for record in self:
-            record.signed_count = len(record.signer_ids.filtered(lambda r: r.signed_on))
-
     def open_template(self):
         return self.template_id.configure()
 
@@ -281,9 +286,7 @@ class SignOcaRequest(models.Model):
 
     def sign(self):
         self.ensure_one()
-        signer = self.signer_ids.filtered(
-            lambda r: r.partner_id == self.env.user.partner_id
-        )
+        signer = self.signer_from_user_partner
         if not signer:
             return self.get_formview_action()
         return {
@@ -291,8 +294,8 @@ class SignOcaRequest(models.Model):
             "tag": "sign_oca",
             "name": self.template_id.name,
             "params": {
-                "res_model": signer[0]._name,
-                "res_id": signer[0].id,
+                "res_model": signer._name,
+                "res_id": signer.id,
             },
         }
 
@@ -326,7 +329,6 @@ class SignOcaRequest(models.Model):
 
 
 class SignOcaRequestSigner(models.Model):
-
     _name = "sign.oca.request.signer"
     _inherit = "portal.mixin"
     _description = "Sign Request Value"
@@ -361,12 +363,13 @@ class SignOcaRequestSigner(models.Model):
             )
 
     def _compute_access_url(self):
-        super()._compute_access_url()
+        res = super()._compute_access_url()
         for record in self:
             record.access_url = "/sign_oca/document/%s/%s" % (
                 record.id,
                 record.access_token,
             )
+        return res
 
     @api.onchange("role_id")
     def _onchange_role_id(self):
