@@ -1034,6 +1034,7 @@ msgstr "Firmato il"
 #. module: sign_oca
 #: model:ir.model.fields,field_description:sign_oca.field_res_partner__signer_ids
 #: model:ir.model.fields,field_description:sign_oca.field_res_users__signer_ids
+#: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request__signer_id
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request__signer_ids
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_request_log__signer_id
 #: model:ir.model.fields,field_description:sign_oca.field_sign_oca_template_generate__signer_ids

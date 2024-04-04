@@ -77,15 +77,17 @@ odoo.define(
                 }
             }
             postIframeField(item) {
-                var signatureItem = super.postIframeField(...arguments);
-                signatureItem[0].append(
-                    SignRegistry.map[item.field_type].generate(
-                        this,
-                        item,
-                        signatureItem
-                    )
-                );
-                return signatureItem;
+                if (item.role_id === this.info.role_id) {
+                    var signatureItem = super.postIframeField(...arguments);
+                    signatureItem[0].append(
+                        SignRegistry.map[item.field_type].generate(
+                            this,
+                            item,
+                            signatureItem
+                        )
+                    );
+                    return signatureItem;
+                }
             }
             checkFilledAll() {
                 this.to_sign_update =
