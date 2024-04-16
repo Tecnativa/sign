@@ -45,6 +45,8 @@
             "sign_oca/static/src/components/sign_oca_pdf/sign_oca_pdf_action.esm.js",
             "sign_oca/static/src/components/"
             "sign_oca_pdf_common/sign_oca_pdf_common_action.esm.js",
+            "sign_oca/static/src/js/*.js",
+            "sign_oca/static/src/xml/*.xml",
         ],
         "web.assets_frontend": [
             "sign_oca/static/src/components/sign_oca_pdf_common/sign_oca_pdf_common.xml",
@@ -60,6 +62,8 @@
             "sign_oca/static/src/components/sign_oca_pdf_portal/sign_oca_pdf_portal.esm.js",
             "sign_oca/static/src/components/sign_oca_pdf_portal/sign_oca_pdf_portal.xml",
             "sign_oca/static/src/scss/portal.scss",
+            "sign_oca/static/src/js/*.js",
+            "sign_oca/static/src/xml/*.xml",
         ],
         "sign_oca.sign_assets": [
             "sign_oca/static/src/scss/sign.scss",
