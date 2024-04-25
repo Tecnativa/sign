@@ -2,7 +2,6 @@
 <!-- Copyright 2023 Dixmit
      License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
 <odoo>
-
     <record model="ir.ui.view" id="sign_oca_request_form_view">
         <field name="name">sign.oca.request.form (in sign_oca)</field>
         <field name="model">sign.oca.request</field>
@@ -123,7 +122,6 @@
             </form>
         </field>
     </record>
-
     <record model="ir.ui.view" id="sign_oca_request_search_view">
         <field name="name">sign.oca.request.search (in sign_oca)</field>
         <field name="model">sign.oca.request</field>
@@ -179,7 +177,7 @@
                 <filter
                     string="Future Activities"
                     name="activities_upcoming_all"
-                    domain="[('my_activity_date_deadline', '&gt;', context_today().strftime('%Y-%m-%d'))                         ]"
+                    domain="[('my_activity_date_deadline', '&gt;', context_today().strftime('%Y-%m-%d'))]"
                 />
                 <separator />
                 <filter
@@ -204,7 +202,6 @@
             </search>
         </field>
     </record>
-
     <record model="ir.ui.view" id="sign_oca_request_tree_view">
         <field name="name">sign.oca.request.tree (in sign_oca)</field>
         <field name="model">sign.oca.request</field>
@@ -228,8 +225,6 @@
             </tree>
         </field>
     </record>
-
-
     <record model="ir.ui.view" id="sign_oca_request_kanban_view">
         <field name="name">sign.oca.request.kanban (in sign_oca)</field>
         <field name="model">sign.oca.request</field>
@@ -320,7 +315,6 @@
             </kanban>
         </field>
     </record>
-
     <record model="ir.ui.view" id="sign_oca_request_signer_tree_view">
         <field name="name">sign.oca.request.signer.tree (in sign_oca)</field>
         <field name="model">sign.oca.request.signer</field>
@@ -343,6 +337,7 @@
                         string="Sign"
                         type="object"
                         name="sign"
+                        class="btn btn-primary"
                         attrs="{'invisible': [('is_allow_signature', '=', False)]}"
                     />
                 </header>
@@ -358,7 +353,6 @@
             </form>
         </field>
     </record>
-
     <record model="ir.actions.act_window" id="sign_oca_request_signer_act_window">
         <field name="name">Sign Request Signers</field>
         <field name="res_model">sign.oca.request.signer</field>
@@ -366,7 +360,6 @@
         <field name="domain">[]</field>
         <field name="context">{}</field>
     </record>
-
     <record model="ir.actions.act_window" id="sign_oca_request_act_window">
         <field name="name">Sign Requests</field>
         <field name="res_model">sign.oca.request</field>
@@ -374,7 +367,6 @@
         <field name="domain">[]</field>
         <field name="context">{}</field>
     </record>
-
     <record model="ir.actions.act_window" id="sign_oca_request_template_act_window">
         <field name="name">Sign Requests</field>
         <field name="res_model">sign.oca.request</field>
@@ -382,12 +374,10 @@
         <field name="domain">[('template_id', '=', active_id)]</field>
         <field name="context">{}</field>
     </record>
-
     <record model="ir.ui.menu" id="sign_oca_request_menu">
         <field name="name">Requests</field>
         <field name="parent_id" ref="sign_oca_root_menu" />
         <field name="action" ref="sign_oca_request_act_window" />
         <field name="sequence" eval="30" />
     </record>
-
 </odoo>

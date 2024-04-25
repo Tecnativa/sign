@@ -5,7 +5,6 @@ from odoo import api, fields, models
 
 
 class SignOcaTemplate(models.Model):
-
     _name = "sign.oca.template"
     _description = "Sign Oca Template"  # TODO
     _inherit = ["mail.thread"]
@@ -54,17 +53,13 @@ class SignOcaTemplate(models.Model):
 
     def get_info(self):
         self.ensure_one()
+        sign_roles = self.env["sign.oca.role"].search([])
+        sign_fields = self.env["sign.oca.field"].search([])
         return {
             "name": self.name,
             "items": {item.id: item.get_info() for item in self.item_ids},
-            "roles": [
-                {"id": role.id, "name": role.name}
-                for role in self.env["sign.oca.role"].search([])
-            ],
-            "fields": [
-                {"id": field.id, "name": field.name}
-                for field in self.env["sign.oca.field"].search([])
-            ],
+            "roles": [{"id": role.id, "name": role.name} for role in sign_roles],
+            "fields": [{"id": field.id, "name": field.name} for field in sign_fields],
         }
 
     def delete_item(self, item_id):
@@ -130,7 +125,6 @@ class SignOcaTemplate(models.Model):
 
 
 class SignOcaTemplateItem(models.Model):
-
     _name = "sign.oca.template.item"
     _description = "Sign Oca Template Item"  # TODO
 

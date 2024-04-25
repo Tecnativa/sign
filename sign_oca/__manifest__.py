@@ -40,7 +40,6 @@
             "sign_oca/static/src/elements/text.esm.js",
             "sign_oca/static/src/elements/signature.esm.js",
             "sign_oca/static/src/elements/check.esm.js",
-            "sign_oca/static/src/elements/systray.js",
             "sign_oca/static/src/components/sign_oca_pdf/sign_oca_pdf.esm.js",
             "sign_oca/static/src/components/sign_oca_pdf/sign_oca_pdf_action.esm.js",
             "sign_oca/static/src/components/"
